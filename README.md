@@ -26,7 +26,7 @@ To also include player statistics, I merged FlightScope data with:
 
 Using the **Merge Files.py** script, I combined both of these sources to create a comprehensive dataset that contained both basic and advanced statistics.
 
-#### **Dashboard Development**  
+#### **[Dashboard Development](https://lookerstudio.google.com/u/0/reporting/489badb7-a77f-4fb5-9505-fa4db8bb8d4f/page/p_p8gi1iux6c/edit)**  
 To facilitate visualization and analysis, I developed an interactive Looker Studio dashboard with key features including:
 - **Pitching Metrics:** Maximum and average velocity/spin rate tables, pitch distribution pie charts, and pitch result bar graphs.
 - **Hitting Metrics:** Tables displaying maximum exit velocity, average launch angle, and average exit velocity for individual players and pitch types.
