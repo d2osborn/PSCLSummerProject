@@ -28,7 +28,7 @@ def remove_null_pitches(*pitches):
             return "null"
 
 # Read the flightscope data and drop columns with empty/irrelevant data
-flightscope_df = pd.read_csv('')
+flightscope_df = pd.read_csv('files/Flightscope Data/2023-PSCL-total - Sheet1.csv')
 flightscope_df = flightscope_df.drop(columns=[i for i in flightscope_df if "Col" in i])
 flightscope_df = flightscope_df.drop(columns=["PA of Inning", "Pitch of PA", "Notes", "Supervisor"])
 flightscope_df = flightscope_df.rename(columns={"Home Team.1": "Away Team"})
@@ -77,4 +77,4 @@ flightscope_df = flightscope_df[flightscope_df['Pitcher'].str.split().apply(len)
 flightscope_df = flightscope_df[flightscope_df["Batter"].str.split().apply(len) > 1]
 
 # Save the cleaned data to a CSV file
-flightscope_df.to_csv('')
+flightscope_df.to_csv('files/Flightscope Data/2023-PSCL-total - Sheet5.csv')
