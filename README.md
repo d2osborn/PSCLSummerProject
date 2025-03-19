@@ -1,4 +1,4 @@
-**Palm Springs Collegiate League Baseball Statistician Internship Report**
+**Palm Springs Collegiate League Baseball Analtics Internship Report**
 
 ---
 
