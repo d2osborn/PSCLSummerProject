@@ -1,14 +1,63 @@
-#PSCL-Summer2023
+**Palm Springs Collegiate League Baseball Statistician Internship Report**
 
-During the Summer of 2023, I was a Baseball Statistician Intern for the Palm Springs Collegiate League, hosted by the Palm Springs Power Baseball Team. As an intern, one of my responsibilities entailed tracking in-game live stats using camera technology software, Flightscope, I'd then upload those stats onto a folder that I'd update after every game. Some of the in-game live stats that Flightscope would track include Pitch Speed, Pitch Launch (V), Pitch Launch (H), Pitch Spin, and Pitch Spin Direction. Utilizing these stats and what I saw from the pitcher, I'd dictate what the pitch type was. The average temperature high in Palm Springs, California, during this internship was 108°F. The camera technology was also not in the shade, so a problem we faced throughout was that the technology would overheat. This would cause us to have incomplete data during games, such that we'd have null values in place of pitch type or we'd have brief periods where we weren't able to track any pitch. Another one of my responsibilities was to clean up that messed up data and get rid of all of the NaN and null values inside of the data. I also had to remove duplicates that had the same name but had something extra like a jersey number (#12), because it was one player that had the name but there were two separate ID's. Once I finished cleaning up the data, I uploaded the data set as a csv to the PSCL Scouting Report that was created in Looker Studio. Inside of the report, there was a section for batters and pitchers. In the pitchers section, there was a table that showcased the maximum velocity and spin rate, and the average velocity and spin rate for either the league or an individual player. There was also a pitch distribution pie chart, and a pitch result bar graph that included balls, called strikes, fouls, hits, etc. For the hitters section, there were two tables: one that showed the max exit velocity, average launch angle, and average exit velocity for each player, and one that did the same but for each type of pitch instead.
+---
 
-The `Data Cleaning.py` script processes the Flightscope pitch-by-pitch data to ensure data accuracy before uploading it into Looker Studio. The primary focus of the cleaning is on standardizing player names across teams, ensuring that each player has valid pitch and batting metrics. 
+### **1. Introduction**  
+The [Palm Springs Collegiate League](https://psclbaseball.com/) (PSCL), hosted by the Palm Springs Power Baseball Team, focuses on providing collegiate baseball players an opporunity for player development as well as assisting any uncommitted players look for a community college or university to play at. My role with the PSCL was as a Baseball Analytics Intern, where I was responsible for tracking, cleaning, and analyzing in-game pitch data using Flightscope camera technology. My role focused on developing an interactive Looker dashboard to assist players and coaches evaluate player pitching/hitting metrics.
 
-The `Merge Files.py` script combines data from two sources:
-* [HomeTeamsOnline (HTO)](https://www.hometeamsonline.com/teams/Default.asp?s=baseball&u=PALMSPRINGSCOLLEGIAT) - The official website for the PSCL, which provides standard pitching and batting statistics for each player.
-* GameChanger -  A scorekeeping app developed by Dick's Sporting Goods that records both basic and advanced player statistics based play-by-play scorekeeping.
+---
 
-By merging player data from both sources, I am able to provide both basic and advanced statistics for each pitcher and hitter in the PSCL. 
+### **2. Responsibilities**  
+#### **Live Game Data Tracking**  
+Using FlightScope, I tracked in-game pitch data, (e.g., Pitch Speed, Pitch Launch Angle (Vertical & Horizontal), and Pitch Spin Rate & Direction), which also included batted ball metrics (e.g., Exit Velocity, and Vertical Launch Angle). Based on these data points and in-game observations, I would classify pitch types for each recorded pitch. After each game, I uploaded the data to a central folder for further analysis.
 
+#### **Data Cleaning & Standardization**  
+Due to environmental challenges and technological limitations, some pitch data would often contain missing values and inconsistencies. My responsibilities included:
+- Identifying and removing NaN/null values from datasets.
+- Standardizing player names across different datasets to avoid duplication.
+- Resolving duplicate player records caused by variations in name formats (e.g., "John Doe" vs. "John Doe (#12)").
 
-FlightScope responsibilities: managed roster, ensuring data accuracy, and organized storage • Utilized Python for thorough player data analysis • Produced detailed reports with charts and statistical insights • Tracked live in-game stats using camera technology - Flightscope
+I developed a Python script, **Data Cleaning.py**, to automate the data cleaning process and ensure accuracy before analysis.
+
+#### **Data Integration**  
+To also include player statistics, I merged FlightScope data with:
+- **[HomeTeamsOnline (HTO)](https://www.hometeamsonline.com/teams/Default.asp?s=baseball&u=PALMSPRINGSCOLLEGIAT):** PSCL league website for statistics. Provided standard pitching and batting statistics for each player. 
+- **GameChanger:** A scorekeeping app that recorded advanced player statistics based on play-by-play scorekeeping.
+
+Using the **Merge Files.py** script, I combined both of these sources to create a comprehensive dataset that contained both basic and advanced statistics.
+
+#### **Dashboard Development**  
+To facilitate visualization and analysis, I developed an interactive Looker Studio dashboard with key features including:
+- **Pitching Metrics:** Maximum and average velocity/spin rate tables, pitch distribution pie charts, and pitch result bar graphs.
+- **Hitting Metrics:** Tables displaying maximum exit velocity, average launch angle, and average exit velocity for individual players and pitch types.
+
+This dashboard provided a user-friendly interface for coaches and players to track their performance and showcase their metrics to any college scouts.
+
+---
+
+### **3. Challenges and Solutions**  
+#### **Extreme Weather Conditions**
+The biggest challenge that I came across was the fact that the average temperature in Palm Springs during the summer is 108ºF. This would ultimately cause the FlightScope camera to overheat, which would lead to data loss. As a workaround, I had to:
+- Monitor the equipment to minimize downtime.
+- Identify and flag missing or incomplete data.
+
+---
+
+### **4. Tools and Technologies Used**  
+- **FlightScope** (for data collection)
+- **Python** (for data cleaning and merging)
+  - I used the Pandas and NumPy libraries
+- **Looker Studio** (for dashboard development)
+- **HomeTeamsOnline & GameChanger** (for additional statistics)
+
+---
+
+### **5. Internship Outcomes and Impact**  
+- The Looker Studio dashboard improved accessibility to performance metrics for both pitchers and hitters.
+- Coaches and players would use the dashboard to track performance trends and identify areas for improvement (e.g., a hitter's average vertical launch angle is too low, meaning they're hitting the grounders too often).
+- Any college scouts benefited from the visualization tools.
+
+---
+
+### **6. Conclusion**  
+This internship provided me with hands-on experience in baseball analytics, data cleaning, and visualization. By overcoming challenges related to extreme weather and data inconsistencies, I improved my skills in Python scripting and dashboard development. This experience has strengthened my interest in analytics within baseball and reinforced my ability to work with real-time sports data. Future enhancements could include machine learning models to predict pitch effectiveness or even pitch type, (in case I or any of the other interns tagged it wrong), and expanding the dashboard to incorporate the player statistics from HTO and GameChanger.
