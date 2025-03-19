@@ -9,7 +9,7 @@ The [Palm Springs Collegiate League](https://psclbaseball.com/) (PSCL), hosted b
 
 ### **2. Responsibilities**  
 #### **Live Game Data Tracking**  
-Using FlightScope, I tracked in-game pitch data, (e.g., Pitch Speed, Pitch Launch Angle (Vertical & Horizontal), and Pitch Spin Rate & Direction), which also included batted ball metrics (e.g., Exit Velocity, and Vertical Launch Angle). Based on these data points and in-game observations, I would classify pitch types for each recorded pitch. After each game, I uploaded the data to a central folder for further analysis.
+Using FlightScope, I tracked in-game pitch data, (e.g., Pitch Speed, Pitch Launch Angle (Vertical & Horizontal), and Pitch Spin Rate & Direction), which also included batted ball metrics (e.g., Exit Velocity, and Vertical Launch Angle). Based on these metrics and in-game observations, I would tag the pitch type of each recorded pitch. After each game, I uploaded the data to a central folder for further analysis.
 
 #### **Data Cleaning & Standardization**  
 Due to environmental challenges and technological limitations, some pitch data would often contain missing values and inconsistencies. My responsibilities included:
