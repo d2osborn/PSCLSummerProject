@@ -1,8 +1,6 @@
 **Palm Springs Collegiate League Baseball Analtics Internship Report**
 
 ---
-
-### **1. Introduction**  
 The [Palm Springs Collegiate League](https://psclbaseball.com/) (PSCL), hosted by the Palm Springs Power Baseball Team, focuses on providing collegiate baseball players an opporunity for player development as well as assisting any uncommitted players look for a community college or university to play at. My role with the PSCL was as a Baseball Analytics Intern, where I was responsible for tracking, cleaning, and analyzing in-game pitch data using Flightscope camera technology. My role focused on developing an interactive Looker dashboard to assist players and coaches evaluate player pitching/hitting metrics.
 
 ---
